@@ -81,7 +81,7 @@ p {
     line-height: 1.5em;
 }
 .section1 .img {
-    background-image: url(./images/bg-intro-desktop.svg);
+    background-image: url(./bg-intro-desktop.svg);
     background-size: 110%;
     background-repeat: no-repeat;
 }
