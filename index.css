@@ -191,6 +191,9 @@ footer .two {
 footer .three {
     text-align: right;
 }
+footer a {
+        text-decoration: none;
+    }
 .tabBtn {
     display: none;
 }
@@ -286,9 +289,6 @@ footer .three {
     }
     footer .three {
         text-align: center;
-    }
-    footer a {
-        text-decoration: none;
     }
     .tabBtn {
         display: unset;
