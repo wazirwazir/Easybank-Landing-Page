@@ -267,6 +267,9 @@ footer a {
         max-width: 300px;
         margin: 1em auto;
     }
+    .abt {
+        padding: 0 2em;
+    }
     .section3 {
         text-align: center;
     }
