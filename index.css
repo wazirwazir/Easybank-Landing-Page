@@ -4,6 +4,7 @@ body {
     font-family: "Public Sans", sans-serif;
 }
 nav {
+    box-sizing: border-box;
     position: fixed;
     display: flex;
     justify-content: space-around;
@@ -11,6 +12,8 @@ nav {
     background-color: white;
     height: 50px;
     width: 100%;
+    padding: 1em;
+    
 }
 h1, h2, h3 {
     font-family: "Public Sans", sans-serif;
@@ -21,15 +24,17 @@ nav ul {
     display: flex;
     gap: 0.4em;
     margin-left: 0;
+    animation: fade 500ms forwards ease-in-out ;
 }
 nav ul li {
     list-style: none;
     cursor: pointer;
     padding: 12px 7px;
     border: 3px solid transparent;
-    transition-duration: 0.5s;
+    transition-duration: 300ms;
     color: hsl(233, 8%, 62%);
     box-sizing: border-box;
+    border: none;
     
 }
 nav ul li:hover {
@@ -73,7 +78,7 @@ main {
     max-width: 278px;
 }
 .section1 .note p {
-    max-width: 378px;
+    max-width: 500px;
 }
 p {
     color: hsl(233, 8%, 62%);
@@ -89,7 +94,7 @@ p {
     width: 500px;
 }
 .section2 {
-    padding: 3em 5em;
+    padding: 3em 10%;
     padding-top: 7em;
     background-color: hsl(0, 0%, 98%);
 }
@@ -105,13 +110,12 @@ p {
     gap: 2em;
 }
 .reason div {
-    max-width: 220px;
+    max-width: 300px;
 }
 .section3 {
-    padding: 3em 5em;
+    padding: 3em 10%;
 }
 .articles div {
-    max-width: 300px;
     background-color: white;
     padding-bottom: 0.5em;
     border-top-left-radius: 15px;
@@ -122,6 +126,7 @@ p {
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    height: 200px;
 }
 h3{
     cursor: pointer;
@@ -134,7 +139,7 @@ h3:hover, h3 a:hover {
     color: hsl(136, 65%, 51%);
 }
 .abt {
-   margin: 0 2em 0 2em;
+    margin: 0 2em 0 2em;
 }
 sub {
     color: hsl(233, 8%, 62%);
@@ -197,6 +202,14 @@ footer a {
 .tabBtn {
     display: none;
 }
+@keyframes fade {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 @media (max-width: 750px) {
     .firstBtn {
@@ -233,12 +246,17 @@ footer a {
     }
     .section1 {
         flex-direction: column-reverse;
+        align-items: center;
         max-height: unset;
     }
     .section1 .note {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0;
         text-align: center;
-        margin: 1em auto;
+        width: 70%;
+        max-width: unset;
         
     }
     .section1 .img {
@@ -279,6 +297,13 @@ footer a {
     }
     .section3 .articles div {
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section3 .articles div img {
+        width: 90%;
+        height: unset;
     }
     footer {
         flex-direction: column;
